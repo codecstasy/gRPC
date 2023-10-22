@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	pb "github.com/codecstasy/gRPC/proto"
+	pb "github.com/akhil/grpc-demo/proto"
 )
 
 func (s *helloServer) SayHello(ctx context.Context, req *pb.NoParam) (*pb.HelloResponse, error) {
