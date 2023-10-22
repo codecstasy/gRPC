@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	pb "github.com/akhil/grpc-demo/proto"
+	pb "github.com/codecstasy/gRPC/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -24,9 +24,5 @@ func main() {
 	names := &pb.NamesList{
 		Names: []string{"Akhil", "Alice", "Bob"},
 	}
-
-	//callSayHello(client)
-	//callSayHelloServerStream(client, names)
-	//callSayHelloClientStream(client, names)
 	callSayHelloBidirectionalStream(client, names)
 }
